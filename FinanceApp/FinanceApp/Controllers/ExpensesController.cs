@@ -34,7 +34,7 @@ namespace FinanceApp.Controllers
 
                 return RedirectToAction("Index");
             }
-            return View();
+            return View(expense);
         }
     }
 }
