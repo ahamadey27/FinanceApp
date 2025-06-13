@@ -17,7 +17,11 @@ namespace FinanceApp.Controllers
             var expenses = _context.Expenses.ToList();
             return View(expenses);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
 
-// Note: The provided code block is a command to execute in the terminal for adding a migration, not a code change to be incorporated into the file.
