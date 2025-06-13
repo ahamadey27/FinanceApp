@@ -15,6 +15,6 @@ namespace FinanceApp.Models
         [Range(0.01, double.MaxValue, ErrorMessage = "Amount needs to be more than zero")]
         [Required]
         public string Catagory { get; set; } = null!;
-        public DateTime MyProperty { get; set; } = DateTime.Now; 
+        public DateTime Date { get; set; } = DateTime.Now; 
     }
 }

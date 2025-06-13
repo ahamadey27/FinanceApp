@@ -29,6 +29,7 @@ app.UseAuthorization();
 
 app.MapStaticAssets();
 
+//Where users make requests to the controller
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")

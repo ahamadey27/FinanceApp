@@ -10,7 +10,7 @@ namespace FinanceApp.Data
 
         }
         //Click "View" up top "Server Explorer" and create database server and right click top to create data base
-        DbSet<Expense> Expenses { get; set; }
+        public DbSet<Expense> Expenses { get; set; }
 
     }
 }
