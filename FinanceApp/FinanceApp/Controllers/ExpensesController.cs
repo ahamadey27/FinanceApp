@@ -26,12 +26,12 @@ namespace FinanceApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Crearte(Expense expense)
+        public async Task<IActionResult> Create(Expense expense)
         {
             if(ModelState.IsValid)
             {
                 _context.Expenses.Add(expense);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
 
                 return RedirectToAction("Index");
             }
