@@ -1,6 +1,7 @@
 ﻿using FinanceApp.Data;
 using FinanceApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FinanceApp.Controllers
 {
@@ -12,10 +13,10 @@ namespace FinanceApp.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             //Get expenses from database and imported to view
-            var expenses = _context.Expenses.ToList();
+            var expenses = await _context.Expenses.ToListAsync();
             return View(expenses);
         }
 
