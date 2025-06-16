@@ -1,14 +1,15 @@
 using FinanceApp.Data;
+using FinanceApp.Data.Service;
+using FinanceApp.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-//Connects to Database
-builder.Services.AddDbContext<FinanceAppContext>(options =>
+builder.Services.AddDbContext<FinanceAppContext>(options => //Connects to Database
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
+builder.Services.AddScoped<IExpensesService, ExpensesService>();
 
 //Adds migrations to Database
 
