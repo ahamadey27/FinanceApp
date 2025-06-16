@@ -38,13 +38,12 @@
         .then(response => )
         .then(data => {
             new Chart(ctx, {
-              type: 'bar',
+              type: 'pie',
               data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: data.map(d => d.catagory),
                 datasets: [{
-                  label: '# of Votes',
-                  data: [12, 19, 3, 5, 2, 3],
-                  borderWidth: 1
+                 
+                  data: data.map(d => d.total),
                 }]
               }
         }      
