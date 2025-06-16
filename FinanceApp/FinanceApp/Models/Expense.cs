@@ -9,7 +9,7 @@ namespace FinanceApp.Models
         [Required]
         public string Description { get; set; } = null!;
         [Required]
-        [Range(0.01, double.MaxValue, ErrorMessage = "Amount needs to be more than zero")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "Need to add description")]
         public double Amount { get; set; }
         // Ensure the amount is greater than zero
         [Range(0.01, double.MaxValue, ErrorMessage = "Amount needs to be more than zero")]
